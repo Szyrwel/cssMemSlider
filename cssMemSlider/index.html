@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>cssSliderMems</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <div class="slider">
-            <input type="radio" name="slide" id="slide-1" checked>
-            <input type="radio" name="slide" id="slide-2">
-            <input type="radio" name="slide" id="slide-3">
-            <input type="radio" name="slide" id="slide-4">
-
-            <div class="slide"><img src="" alt="slide"></div>
-            <div class="slide"><img src="" alt="slide"></div>
-            <div class="slide"><img src="" alt="slide"></div>
-            <div class="slide"><img src="" alt="slide"></div>
+      <div class="slider">
+        <input type="radio" name="slide" id="slide-1" checked />
+        <input type="radio" name="slide" id="slide-2" />
+        <input type="radio" name="slide" id="slide-3" />
+        <input type="radio" name="slide" id="slide-4" />
+        <div class="slides">
+          <div class="slide"><img src="./assets/01.jpg" alt="slide" /></div>
+          <div class="slide"><img src="./assets/02.jpg" alt="slide" /></div>
+          <div class="slide"><img src="./assets/03.jpg" alt="slide" /></div>
+          <div class="slide"><img src="./assets/04.jpg" alt="slide" /></div>
         </div>
-    </div>
+        <div class="wrapper-2">
+          <div class="description-wrapper">
+            <div class="descriptions">
+              <p class="description">раз</p>
+              <p class="description">два</p>
+              <p class="description">три</p>
+              <p class="description">четыре</p>
+            </div>
+          </div>
 
-    <div class="navigation">
-        <label for="slide-1" class="navigation__item"></label>
-        <label for="slide-2" class="navigation__item"></label>
-        <label for="slide-3" class="navigation__item"></label>
-        <label for="slide-4" class="navigation__item"></label>
+          <div class="navigation">
+            <label for="slide-1" class="navigation__item">
+              <div class="navigation-button"></div>
+            </label>
+            <label for="slide-2" class="navigation__item"
+              ><div class="navigation-button"></div
+            ></label>
+            <label for="slide-3" class="navigation__item"
+              ><div class="navigation-button"></div
+            ></label>
+            <label for="slide-4" class="navigation__item"
+              ><div class="navigation-button"></div
+            ></label>
+          </div>
+        </div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
