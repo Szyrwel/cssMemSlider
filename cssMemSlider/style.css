@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Georgia, "Times New Roman", Times, serif, sans-serif;
-  font-size: 0.9rem;
+  
   font-style: italic;
   color: #c7d0cc;
 }
@@ -14,10 +14,11 @@ body {
 .wrapper {
   display: flex;
   align-items: center;
-  max-width: 70%;
+  max-width: 65%;
   max-height: 100vh;
   margin: 0 auto;
-  padding: calc(100% - 98%) 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 input {
   -webkit-appearance: none;
@@ -26,7 +27,7 @@ input {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 0.5em white double;
+  border: 0.3rem white solid;
   border-radius: 5%;
   background-color: black;
   padding: calc(100% - 98%) 0;
@@ -38,10 +39,11 @@ input {
   width: 600%;
   height: auto;
   border-radius: 5%;
+  transition: all 0.6s ease;
 }
 .slide {
-  width: calc(100%/6);
-  transition: all 0.6s ease;
+  width: 100%;
+  
 }
 
 .slide img {
@@ -51,13 +53,14 @@ input {
 
 .wrapper-2 {
   display: flex;
-  padding: 2rem 1rem;
+  padding: 1rem;
   align-items: center;
   justify-content: space-between;
   column-gap: 5rem;
 }
 .description-wrapper {
   overflow: hidden;
+  width: 100%;
 }
 
 .descriptions {
@@ -65,18 +68,18 @@ input {
   width: 600%;
   justify-content: start;
   align-items: center;
+  transition: all 0.6s ease;
 }
 .description {
-  width: calc(100%/6);
-  transition: all 0.6s ease;
-  
+  width: 100%;
+  font-size: 1.5rem;
 }
 
 .navigation {
   display: flex;
-  column-gap: 1rem;
+  column-gap: 0.5rem;
   justify-content: end;
-  flex-basis: 30%;
+  
   align-items: center;
 }
 
@@ -87,21 +90,22 @@ input {
 .navigation-button {
   height: 1.5rem;
   width: 1.5rem;
+  margin: 1rem 0.1rem;
   background-color: grey;
   border-radius: 50%;
 }
 
 .navigation__item:hover .navigation-button {
   background-color: #d3d3d3;
-  border: 0.3rem solid #9C9C9C;
+  border: 0.3rem solid #9c9c9c;
   
   transition: all 0.6s ease;
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #slide-1:checked ~ .slides,
 #slide-1:checked ~ .wrapper-2 .description-wrapper .descriptions {
-  transform: translateX(-0%);
+  margin-left: 0;
 }
 
 #slide-2:checked ~ .slides,
@@ -133,7 +137,27 @@ input {
 #slide-5:checked ~ .wrapper-2 .navigation [for="slide-5"] .navigation-button,
 #slide-6:checked ~ .wrapper-2 .navigation [for="slide-6"] .navigation-button {
   background-color: #d3d3d3;
-  border: 0.3rem solid grey;
-  height: calc(1.5rem * 1.2);
-  width: calc(1.5rem * 1.2);
+  border: 0.2rem solid grey;
+  
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 5vw;
+  }
+  .wrapper {
+    max-width: 84%;
+  }
+  .wrapper-2 {
+    flex-direction: column-reverse;
+    row-gap: 1rem;
+  }
+  .navigation {
+    justify-content: center;
+    column-gap: 0.3rem;
+  }
+  .navigation-button {
+    margin: 0.8rem 0.1rem;
+    
+  }
 }
